@@ -9,17 +9,17 @@
 <body>
     <div class="blinking">Top up hanya di zaidgamingstore</div>
     <div class="container">
-        <h1>Penghitung Winrate</h1>
+        <h1>WinRate Target Calculator</h1>
         <form id="winrateForm">
             <label for="total_matches">Total Matches:</label>
-            <input type="number" id="total_matches" name="total_matches" required>
+            <input type="number" id="total_matches" name="total_matches" inputmode="numeric" pattern="\d*" required>
             <br>
             <label for="current_winrate">WinRate Sekarang (%):</label>
-            <input type="number" id="current_winrate" name="current_winrate" step="0.1" required>
+            <input type="number" id="current_winrate" name="current_winrate" step="0.1" inputmode="decimal" pattern="\d+(\.\d{1,2})?" required>
             <p id="current_winrate_message" class="message"></p>
             <br>
             <label for="target_winrate">Target WinRate (%):</label>
-            <input type="number" id="target_winrate" name="target_winrate" step="0.1" required>
+            <input type="number" id="target_winrate" name="target_winrate" step="0.1" inputmode="decimal" pattern="\d+(\.\d{1,2})?" required>
             <p id="target_winrate_message" class="message"></p>
             <br>
             <input type="submit" value="Calculate">
