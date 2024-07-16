@@ -7,7 +7,7 @@ document.getElementById('current_winrate').addEventListener('input', function() 
     } else if (currentWinrate >= 100) {
         messageElement.innerText = "Mana ada winrate > 100";
     } else {
-        messageElement.innerText = ""
+        messageElement.innerText = "";
     }
 });
 
