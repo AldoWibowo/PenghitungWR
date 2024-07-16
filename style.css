@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Latar belakang hitam */
+    color: #fff; /* Warna teks putih */
+    margin: 0; /* Menghapus margin default */
+    padding: 10px; /* Menambahkan padding agar tidak mepet */
+    box-sizing: border-box; /* Memastikan padding termasuk dalam lebar elemen */
+}
+
+.blinking {
+    width: 100%;
+    padding: 10px 0;
+    color: #f0ad4e; /* Warna teks */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    animation: blinkingText 1.2s infinite;
+}
+
+@keyframes blinkingText {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Menggunakan lebar penuh */
+    max-width: 400px; /* Maksimal lebar untuk container */
+    box-sizing: border-box; /* Memastikan padding termasuk dalam lebar elemen */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    text-align: center; /* Mengatur teks label ke tengah */
+}
+
+input[type="number"], input[type="submit"] {
+    width: 100%; /* Menggunakan lebar penuh */
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Memastikan padding termasuk dalam lebar elemen */
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: 2px solid #FFD700; /* Sisi warna kuning */
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Tambahan CSS untuk responsif */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="number"], input[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
