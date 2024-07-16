@@ -4,8 +4,10 @@ document.getElementById('current_winrate').addEventListener('input', function() 
 
     if (currentWinrate < 60) {
         messageElement.innerText = "wkwkwk winrate diskon";
+    } else if (currentWinrate >= 100) {
+        messageElement.innerText = "Mana ada winrate > 100";
     } else {
-        messageElement.innerText = "";
+        messageElement.innerText = ""
     }
 });
 
@@ -13,7 +15,7 @@ document.getElementById('target_winrate').addEventListener('input', function() {
     const targetWinrate = parseFloat(document.getElementById('target_winrate').value);
     const messageElement = document.getElementById('target_winrate_message');
 
-    if (targetWinrate === 100) {
+    if (targetWinrate >= 100) {
         messageElement.innerText = "jangan ngimpi bos";
     } else {
         messageElement.innerText = "";
